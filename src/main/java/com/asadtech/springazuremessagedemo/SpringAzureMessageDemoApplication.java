@@ -22,12 +22,12 @@ public class SpringAzureMessageDemoApplication {
 	}
 
 	@GetMapping("/list")
-	List<String> listOfFruit(){
+	String listOfFruit(){
 		List<String> list = new ArrayList<>();
 		list.add("Banana");
 		list.add("Mango");
 		list.add("Apple");
 		list.add("Orange");
-		return list;
+		return list.toString();
 	}
 }
