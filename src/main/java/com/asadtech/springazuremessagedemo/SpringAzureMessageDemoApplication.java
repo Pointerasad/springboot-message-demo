@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @SpringBootApplication
 public class SpringAzureMessageDemoApplication {
@@ -17,4 +19,9 @@ public class SpringAzureMessageDemoApplication {
 		return "welcome to azure deployment";
 	}
 
+	@GetMapping("/fruit-list")
+	List<String> listOfFruit(){
+		List<String> list = List.of("Banana","Mango","Apple","Orange");
+		return list;
+	}
 }
