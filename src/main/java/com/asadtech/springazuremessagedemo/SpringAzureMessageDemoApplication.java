@@ -21,7 +21,7 @@ public class SpringAzureMessageDemoApplication {
 		return "welcome to azure deployment";
 	}
 
-	@GetMapping("/list")
+	@GetMapping("/list2")
 	String listOfFruit(){
 		List<String> list = new ArrayList<>();
 		list.add("Banana");
@@ -29,5 +29,9 @@ public class SpringAzureMessageDemoApplication {
 		list.add("Apple");
 		list.add("Orange");
 		return list.toString();
+	}
+	@GetMapping("/list")
+	String listOfFruit1(){
+		return "list-of-fruit";
 	}
 }
