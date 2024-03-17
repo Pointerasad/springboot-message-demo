@@ -19,7 +19,7 @@ public class SpringAzureMessageDemoApplication {
 		return "welcome to azure deployment";
 	}
 
-	@GetMapping("/fruit-list")
+	@GetMapping("/list")
 	List<String> listOfFruit(){
 		List<String> list = List.of("Banana","Mango","Apple","Orange");
 		return list;
