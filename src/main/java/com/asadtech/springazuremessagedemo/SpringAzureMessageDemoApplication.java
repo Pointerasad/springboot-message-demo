@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,7 +23,11 @@ public class SpringAzureMessageDemoApplication {
 
 	@GetMapping("/list")
 	List<String> listOfFruit(){
-		List<String> list = Arrays.asList("Banana","Mango","Apple","Orange");
+		List<String> list = new ArrayList<>();
+		list.add("Banana");
+		list.add("Mango");
+		list.add("Apple");
+		list.add("Orange");
 		return list;
 	}
 }
